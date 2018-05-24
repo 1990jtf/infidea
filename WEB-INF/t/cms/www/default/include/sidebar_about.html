@@ -1,0 +1,32 @@
+<style>
+    .sidebar .menu{width:200px;padding:0;}
+    .sidebar .menu .active {
+        border-left: 2px solid #f00;
+    }
+    .sidebar .menu li {
+        line-height: 20px;
+        border-left: 2px solid transparent;
+        padding-left: 20px;
+        margin: 10px 0;
+        text-transform: uppercase;
+        color:#707473;
+        font-size: 14px;
+    }
+</style>
+<div class="sidebar fl">
+    <ul class="menu">
+        <li class="active"><a href="${base}/about.jhtml">关于英飞</a></li>
+        <li><a href="${base}/culture.jhtml">企业文化</a></li>
+        <li><a href="${base}/structure.jhtml">架构体系</a></li>
+        <li><a href="${base}/contact.jhtml">联系我们</a></li>
+        <li><a href="${base}/jobs/index.jhtml" target="_blank">招募精英</a></li>
+    </ul>
+</div>
+<script>
+    $(function() {
+        $(".sidebar .menu li").click(function(){
+            $(".sidebar  .menu li").removeClass("active");
+            $(this).addClass("active");
+        })
+    });
+</script>
